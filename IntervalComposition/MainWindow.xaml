@@ -4,8 +4,8 @@
         Title="MainWindow" Height="350" Width="525" AllowDrop="True">
     <DockPanel>
         <Menu DockPanel.Dock="Top">
-            <MenuItem Header="クリア" />
-            <MenuItem Header="実行" />
+            <MenuItem Header="クリア" Command="{Binding Clear}" />
+            <MenuItem Header="実行" Command="{Binding Composition}" />
             <MenuItem Header="保存" />
         </Menu>
         <DockPanel DockPanel.Dock="Left">
@@ -17,8 +17,8 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </DockPanel>
-        <TextBlock DockPanel.Dock="Top" Text="Informations..." />
+        <TextBlock DockPanel.Dock="Top" Text="{Binding Information}" />
 
-        <Image Name="display"></Image>
+        <Image Source="{Binding CompositImage}"></Image>
     </DockPanel>
 </Window>
